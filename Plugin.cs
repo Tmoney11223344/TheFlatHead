@@ -13,18 +13,12 @@ namespace FlatHead
 
 		void OnEnable()
 		{
-			foreach (VRRig vrrig in GorillaParent.instance.vrrigs)
-			{
-				vrrig.headMesh.transform.localScale = new Vector3(1f, 0.5f, 1f);
-			}
+			Flat();
 		}
 
 		void OnDisable()
 		{
-			foreach (VRRig vrrig in GorillaParent.instance.vrrigs)
-			{
-				vrrig.headMesh.transform.localScale = new Vector3(1f, 1f, 1f);
-			}
+			UnFlat();
 		}
 
 		void Update()
@@ -37,6 +31,13 @@ namespace FlatHead
 			foreach (VRRig vrrig in GorillaParent.instance.vrrigs)
 			{
 				vrrig.headMesh.transform.localScale = new Vector3(1f, 0.5f, 1f);
+			}
+		}
+  		public void UnFlat()
+		{
+			foreach (VRRig vrrig in GorillaParent.instance.vrrigs)
+			{
+				vrrig.headMesh.transform.localScale = new Vector3(1f, 1f, 1f);
 			}
 		}
 	}
