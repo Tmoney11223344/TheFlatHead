@@ -30,7 +30,7 @@ namespace FlatHead
 		{
 			foreach (VRRig vrrig in GorillaParent.instance.vrrigs)
 			{
-				vrrig.headMesh.transform.localScale = new Vector3(1f, 0.5f, 1f);
+				vrrig.headMesh.transform.localScale = new Vector3(0.5f, 5f, 1f);
 			}
 		}
   		public void UnFlat()
